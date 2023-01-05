@@ -1,5 +1,5 @@
 ifeq ($(KERNELRELEASE),)
-KDIR := /lib/modules/5.4.0-126-generic/build
+KDIR := /lib/modules/$(shell uname -r)/build
 PWD := $(shell pwd)
 modules:
 	$(MAKE) -C $(KDIR) M=$(PWD) modules
